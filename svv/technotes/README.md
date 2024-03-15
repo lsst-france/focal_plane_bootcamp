@@ -13,11 +13,14 @@
 
 The README welcome page
 
+### Description of HowTo
+
 ![Welcome README page  on github describing HowTo make the note](./Figs/CreatedGitHubWelcomeREADMEWhite.png)
 
 
 
+### List of files
 
-![Wecome README page on github showing the list of files](./Figs/CreatedWebPageTechnote.png)
+![Wecome README page on github showing the list of files](./Figs/GitHubTechnoteListOfFiles.png)
 
 
