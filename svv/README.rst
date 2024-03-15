@@ -1,9 +1,11 @@
-"""""""""""""""""""""""""""""""
-reStructuredText (RST) Tutorial
-"""""""""""""""""""""""""""""""
-++++++++++++++++++++++++++++++++++
-Learn to write beautiful documents
-++++++++++++++++++++++++++++++++++
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+SVV workflow : analysis_tools, JIRA, tech. notes Tutorial
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+Orateurs: Dominique BOUTIGNY (LAPP), Rance Solomon (LAPP), Dr Sylvie Dagoret (IJCLab) 
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+
 
 .. contents:: Overview
    :depth: 2
@@ -72,17 +74,17 @@ http://docutils.sourceforge.net/docs/index.html
 
 
 
-============================
-Create a basic .rst document
-============================
+=======================
+Create a technical note
+=======================
 
 Before getting in to all of the features, let's look at a very basic
 reStructuredText file. reStructuredText files typically have ``.rst`` or ``.txt`` extensions.
 Here is a simple document::
 
-  =================
-  My Project Readme
-  =================
+  =============
+  Why technotes
+  =============
   -------------------------
   Clever subtitle goes here
   -------------------------
@@ -158,166 +160,6 @@ These tools will output to stdout that can be piped to a file like this::
 You can create custom functions called directives to enhance your markup.
 You can also create custom writers to output the parsed document in different
 ways.
-
-------
-Sphinx
-------
-
-`Sphinx <http://www.sphinx-doc.org/en/master/>`_ is built on top of
-``docutils``. While tools like ``rst2html5`` that come with ``docutils`` will
-turn a ``.rst`` file in to a ``.html``, it is generally good for a single page.
-Sphinx is good for larger documentation or writing projects. You can have
-multiple ``.rst`` files in your project to organize and link between them.
-Sphinx is much more powerful and can be used to publish books and websites
-using reStructuredText.
-
-Sphinx has a few output options. Among the options are building a website of
-multiple HTML documents that link together. When you view documentation on
-https://readthedocs.org or you read the official Python documentation, those
-are Sphinx generated pages. You can also build it as a single-
-page HTML document. It also offers plain-text, PDF, epub, and LaTeX builders.
-
-Sphinx also adds a few custom directives (the ``..`` prefixed functions) like
-the ``toctree`` which allows you to embed the table of contents and link to
-another document.
-
-If you are going for "serious" documentation, Sphinx is the choice.
-
-Install Sphinx
---------------
-
-Sphinx is a Python package build on top of ``docutils`` and can be installed
-with ``pip`` like this::
-
-  python -m pip install sphinx
-
-Start a new project
--------------------
-
-Once sphinx is installed, you don't generally invoke ``sphinx-build`` directly
-to build a project the way you call something like ``rst2html``. Instead, you
-call ``sphinx-quickstart`` which will generate a new project with its own build
-script. For example, this command will create a new directory called ``docs``
-and put the project inside of it::
-
-  sphinx-quickstart docs
-
-It will prompt you for a project name and an author name, as well as many other
-questions. You can select all of the defaults if you are unsure.
-
-The new project will have an ``index.rst`` for you to start editing, as well as
-a ``Makefile`` and a ``make.bat`` so you can build it on Windows. It will also
-have a directory for templates and building if you want to customize the
-output. You can add custom CSS and HTML.
-
-Edit the ``index.rst`` and add other pages and subdirectories as needed. When
-you are done editing, you can make/build the project with the ``make`` command.
-
-Build the project
------------------
-
-Once you are ready to build the reStructuredText documents in to their final
-form, you call ``make``::
-
-  make  # Will print all options
-  make.bat # In Windows, sphinx-quickstart creates a make.bat in project root
-
-  # Build the documents to various formats
-  make html
-  make singlehtml
-  make epub
-  make man
-  make latex
-  make text
-
-  # Python specific (not covered here)
-  make doctest   # Run unit tests embedded in docstrings
-  make coverage  # Check documentation coverage of code
-
-They will end up in the ``_build`` directory.
-
-------
-Pandoc
-------
-
-`Pandoc <https://pandoc.org/>`_ is a universal document converter. It can take
-sources in reStructuredText, Markdown, LaTeX, Microsoft Word docx, Open
-Document odt, HTML, epub, and many others and convert it in to various output
-formats including HTML, docx, odt, ppt, epub, PDF, or other markup formats like
-Markdown, RST, AsciiDoc.
-
-Pandoc is intended to be a uinversal may behave slightly differently from
-dedicated RST tools like ``docutils`` and ``Sphinx`` which 
-uses ``docutils``. I would only recommend using Pandoc if you have special
-requirements to convert to a format that is not suported by ``docutils`` and
-``sphinx``.
-
-Install pandoc
---------------
-
-Full installation instructions at
-`Pandoc.org <https://pandoc.org/installing.html>`_
-
-Releases for Windows, Mac, Linux are available for download on GitHub at
-https://github.com/jgm/pandoc/releases.
-
-- **Windows**: Download the installer from the pandoc releases page.
-- **Mac**: Use brew to install: ``brew install pandoc``
-- **Linux**: Download the linux.tar.gz file and extract it. The ``bin/``
-  directory contains the ``pandoc`` executable. Alternatively, in Debian based
-  distributions, there is a ``.deb`` package available for download on that
-  GitHub releases page.
-
----------------
-Readthedocs.org
----------------
-
-The website https://readthedocs.org/ is a great website that will build and host
-your documentation for you. You can use Sphinx, Mkdcocs, or generate your own
-documents. I recommend using Sphinx. When you use ``sphinx-quickstart`` to 
-generate a ``docs/`` directory in your project, ReadTheDocs.org will know what to do.
-Sign up and tell ReadTheDocs.org about your repository, and set up a webhook
-to automatically build and host your documentation any time there is a git push.
-
-They will host multiple versions of documentation, you can use their theme
-or custom themes, and it even makes PDF and ePub versions available.
-
-
-===============
-Syntax examples
-===============
-
-This is a mashup of common syntax. It's like a cheatsheet for quick reference.
-There is some freedom with reStructuredText that allows you to pick different
-characters for creating headers and bulleted lists. As long as you are consistent
-throughout your document it will interpret the headers automatically. This
-example uses my preferred characters and styling for headings.
-
-Overline and underline combined is separate from just underline. The lines can
-be created with any of the following characters, based on preference. You just
-need to be consistent within a single document,
-``' " . , : ; ! ? - ) ] } / \ >``.
-
-Try saving the contents of this example to ``sample.rst`` and build it to HTML
-to see how it looks yourself with::
-
-  rst2html5 sample.rst > sample.html
-
-Some of the elements covered in this example are:
-
-- Headings
-- Comments
-- Images
-- Lists
-- Preformatted text
-- Code blocks
-- Links
-- Footnotes
-- Transitions/lines/horizontal rules
-- Tables
-- Preserving line breaks
-
-Here is the sample reStructuredText::
 
   """""""""""""""""
   Document Title
