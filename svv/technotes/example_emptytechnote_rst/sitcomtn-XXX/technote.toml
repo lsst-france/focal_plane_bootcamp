@@ -1,0 +1,24 @@
+[technote]
+id = "SITCOMTN-119"
+series_id = "SITCOMTN"
+canonical_url = "https://sitcomtn-119.lsst.io"
+github_url = "https://github.com/lsst-sitcom/sitcomtn-119"
+github_default_branch = "main"
+date_created = 2024-03-13T12:41:59Z
+organization.name = "Vera C. Rubin Observatory"
+organization.ror = "https://ror.org/048g3cy84"
+license.id = "CC-BY-4.0"
+
+[technote.status]
+state = "draft"
+
+[[technote.authors]]
+name.given = "Sylvie"
+name.family = "Dagoret-Campagne"
+internal_id = "dagorets"
+
+[[technote.authors.affiliations]]
+name = "Laboratoire de Physique des 2 infinis Irène Joliot-Curie – IJCLab"
+internal_id = "Paris-IJCLAB"
+address = "Université Paris-Saclay, CNRS/IN2P3, Bât. 100, 15 rue Georges Clémenceau, 91405 Orsay, France"
+
