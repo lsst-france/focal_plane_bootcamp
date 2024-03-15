@@ -3,14 +3,14 @@
 .. image:: https://github.com/lsst-sitcom/sitcomtn-119/workflows/CI/badge.svg
    :target: https://github.com/lsst-sitcom/sitcomtn-119/actions/
 
-##########
-Your title
-##########
+################################################################################
+Three years of atmospheric parameters above Rubin-LSST site from MERRA2 database
+################################################################################
 
-SITCOMTN-XXX
+SITCOMTN-119
 ============
 
-Your abstract
+Result of extraction from the MERRA2 for comparison with Auxtel measurements
 
 **Links:**
 
@@ -27,8 +27,8 @@ You can clone this repository and build the technote locally if your system has 
 
 .. code-block:: bash
 
-   git clone https://github.com/lsst-sitcom/sitcomtn-XXX
-   cd sitcomtn-XXX
+   git clone https://github.com/lsst-sitcom/sitcomtn-119
+   cd sitcomtn-119
    make init
    make html
 
