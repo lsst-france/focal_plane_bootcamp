@@ -1,8 +1,18 @@
-## focal_plane_bootcamp package
+## Package description
 This package was created for the LSST-France focal plane workshop at LAPP in march 2024.<br />
-Website of the workshop: https://indico.in2p3.fr/event/32125/.
+Website of the workshop: https://indico.in2p3.fr/event/32125/.<br />
+Slack channel: in2p3-focal-plane<br />
 
 ## Content
+This package was created to store:<br />
+- basic examples for the hands-on sessions of the workshop<br />
+- more advanced examples relevant for the commissioning work<br />.
+It covers:<br />
+1) Butler<br /> 
+2) Pipetasks<br /> 
+3) Job submission with BPS<br /> 
+4) Calibrations<br />
+5) Science Validation and Verification tools<br />
 
 ## Ressources
 - LSST-France User Guide: https://doc.lsst.eu/<br />
