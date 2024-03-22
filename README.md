@@ -8,6 +8,8 @@ This package was created to store:<br />
 - basic examples for the hands-on sessions of the workshop<br />
 - more advanced examples relevant for the commissioning work, in order to share expertise.<br />
 
+Most of the examples are for CC, but some are for USDF.
+
 Table of content:<br />
 1) Butler usage<br /> 
 2) Pipetasks (e.g. ISR) <br /> 
