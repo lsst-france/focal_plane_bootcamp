@@ -29,11 +29,11 @@ mkdir workarea_w_2024_09
 source /cvmfs/sw.lsst.eu/linux-x86_64/lsst_distrib/w_2024_09/loadLSST.bash
 setup lsst_distrib
 ```
-workshop butler
+Workshop butler (for all tests)
 ```
 export REPO=/sps/lsst/groups/training/2024_03_lapp_workshop/butler/main/
 ```
-Run 6 butler (to test your postgresql account)
+Run 6 butler (to test your postgresql account and eventually queries)
 ```
 export REPO=/sps/lsst/groups/FocalPlane/SLAC/run6/butler/main/
 ```
