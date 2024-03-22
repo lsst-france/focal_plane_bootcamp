@@ -7,6 +7,7 @@ Associated slack channel: in2p3-focal-plane<br />
 This package was created to store:<br />
 - basic examples for the hands-on sessions of the workshop<br />
 - more advanced examples relevant for the commissioning work, in order to share expertise.<br />
+
 Table of content:<br />
 1) Butler usage<br /> 
 2) Pipetasks (e.g. ISR) <br /> 
