@@ -53,7 +53,7 @@ Those analysis tools task are run as part of the main data production pipeline. 
 The analysis tools tasks can be viewved as dedicated graphs shown [here](https://tigress-web.princeton.edu/%7Elkelvin/pipelines/w_2024_12/analysis_tools/).
 
 
-A more detailed description of the different analysis tools pipelines
+A more detailed description of the different ``analysis tools pipelines``
 is presented [here](./analysis_tools/README.md).
 
 
@@ -84,16 +84,44 @@ An example of plot : a color-color plot from Auxtel Phtometry imaging is shown b
 
 
 
-Sasquatch and Chronograph
--------------------------
+### Sasquatch 
+
+
+
+[Sasquatch](https://sasquatch.lsst.io/user-guide/index.html)
+is the Rubin Observatory’s service for metrics and telemetry data.
+It collects, store and allow queries about time-series data.
+
+
+It is accessible through [notebooks](./sasquatch/sasquatch_analysis_tools_demo-auxtel.ipynb) run at udf 
+
 
 - [refer to bootcamp2023](https://confluence.lsstcorp.org/display/DM/May+2023+Commissioning+Science+Validation+Bootcamp)
+
+
+### Chronographs
+
+
+
+https://usdf-rsp-dev.slac.stanford.edu/chronograf/login?redirect=%2F
+
+
+<img src="./analysis_tools/Figs/Chronograf.png" width="600">
+
    
 RubinTV
 -------
 
-- [sky monitor](https://roundtable.lsst.codes/rubintv/summit/allsky/historical/2024-03-12)
+The rubinTV can be accessed at this [webpage](https://roundtable.lsst.codes/rubintv/).
 
+
+<img src="./analysis_tools/Figs/rubinTV.png" width="300">
+
+
+In particular there is this nice view of the [sky monitor](https://roundtable.lsst.codes/rubintv/summit/allsky/historical/2024-03-20) at summit:
+
+
+<img src="./analysis_tools/Figs/SkyMonitor.png" width="600">
 
 
 
