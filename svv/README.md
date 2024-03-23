@@ -9,12 +9,16 @@
 
 ## Rubin technical notes
 
+- [./technotes/README.md]([./technotes/README.md)
+
 
 
 ## Analysis tools
 
 
 ### ``analysis_tools`` applied to Auxtel
+
+- [./analysis\_tools/analysis\_tools_auxtel/README.md](./analysis_tools/analysis_tools_auxtel/README.md)
 
 
 
