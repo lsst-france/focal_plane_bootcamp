@@ -115,7 +115,7 @@ RubinTV
 The rubinTV can be accessed at this [webpage](https://roundtable.lsst.codes/rubintv/).
 
 
-<img src="./analysis_tools/Figs/rubinTV.png" width="300">
+<img src="./analysis_tools/Figs/RubinTV.png" width="300">
 
 
 In particular there is this nice view of the [sky monitor](https://roundtable.lsst.codes/rubintv/summit/allsky/historical/2024-03-20) at summit:
