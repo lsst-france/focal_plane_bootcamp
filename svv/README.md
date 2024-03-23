@@ -53,6 +53,11 @@ Those analysis tools task are run as part of the main data production pipeline. 
 The analysis tools tasks can be viewved as dedicated graphs shown [here](https://tigress-web.princeton.edu/%7Elkelvin/pipelines/w_2024_12/analysis_tools/).
 
 
+A more detailed description of the different analysis tools pipelines
+is presented [here](./analysis_tools/README.md).
+
+
+
 ### ``analysis_tools`` applied to Auxtel
 
 - [./analysis\_tools/analysis\_tools_auxtel/README.md](./analysis_tools/analysis_tools_auxtel/README.md)
