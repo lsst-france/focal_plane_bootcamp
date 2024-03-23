@@ -39,7 +39,8 @@ The ``analysis_tools`` are organised in set of tasks that can be run in independ
 ### Coadds object analysis_tools pipelines
 	 
  
-- [coaddQualityCore](https://tigress-web.princeton.edu/%7Elkelvin/pipelines/w_2024_12/analysis_tools/coaddQualityCore/pipeline_analysis_tools_coaddQualityCore.pdf) : Nothing inside	 
+- [coaddQualityCore](https://tigress-web.princeton.edu/%7Elkelvin/pipelines/w_2024_12/analysis_tools/coaddQualityCore/pipeline_analysis_tools_coaddQualityCore.pdf) (Nothing inside) corresponding to the [coaddQualityCore.yaml](https://github.com/lsst/analysis_tools/blob/main/pipelines/coaddQualityCore.yaml). 
+	 
 - [coaddQualityExtended](https://tigress-web.princeton.edu/%7Elkelvin/pipelines/w_2024_12/analysis_tools/coaddQualityExtended/pipeline_analysis_tools_coaddQualityExtended.pdf) : **Some work inside**
 
 
@@ -92,14 +93,45 @@ AND tract=3864 AND (patch=236 or patch=237)" \
 
 
 
-## Design of a tool
+## Example for designing of an analysis_tool
 
 - notebooks : [atoolsInvestigation.ipynb](notebooks/atoolsInvestigation.ipynb)
 
 
 
 
+## Design
+
+- the pipeline [coaddQualityCore.yaml](https://github.com/lsst/analysis_tools/blob/main/pipelines/coaddQualityCore.yaml):
 
 
+This pipeline defines a series of analysis_tools tasks. Among those tasks one can find the task:
+ 
+- defines the task name ``analyzeObjectTableCore``to be refered in [reconstructorDemo-analyzeObjectTableCore.ipynb](notebooks/reconstructorDemo-analyzeObjectTableCore.ipynb)
+- this task produce output with name ``objectTableCore``:
+
+
+	- the list of plots:
+		-  	atools.shapeSizeFractionalDiff: ShapeSizeFractionalDiff
+      	-  atools.e1Diff: E1Diff
+       -  atools.e2Diff: E2Diff
+       -  atools.skyFluxStatisticMetric: SkyFluxStatisticMetric
+       -  atools.skyFluxStatisticMetric.applyContext: CoaddContext
+       -  atools.wPerpPSFP: WPerpPSF
+       -  atools.wPerpCModel: WPerpCModel
+       -  atools.xPerpPSFP: XPerpPSF
+       -  atools.xPerpCModel: XPerpCModel
+       -  atools.yPerpPSF: YPerpPSF
+       -  atools.yPerpCModel: YPerpCModel
+       -  atools.skyObjectSky: SkyObjectSkyPlot
+       -  atools.skyObjectFlux: SkyObjectHistPlot
+       -  atools.psfCModelScatter: PsfCModelScatterPlot
+
+
+
+
+ - the code is simplemented in:
+ 		- [tasks](https://github.com/lsst/analysis_tools/tree/main/python/lsst/analysis/tools/tasks) 
+ 		- [atools](https://github.com/lsst/analysis_tools/tree/main/python/lsst/analysis/tools/atools)		
 
 
