@@ -9,7 +9,9 @@
 
 ## Rubin technical notes
 
-- [./technotes/README.md]([./technotes/README.md)
+The Rubin-project invite the members involved in the commissioning to write technical notes or it didn't happen.  
+
+The process of writting these notes is explained [here](./technotes/README.md).
 
 ## Analysis tools
 
@@ -19,9 +21,19 @@
 
 The structure of DM software consists in an acyclic sequence of ``Tasks`` using some ``data-products`` at their input and producing output ``data-products``. Even if there is some documentation, for example the full diagram for the [DRP pipeline (Data Release Pipeline)](https://pipelines.lsst.io/) on those pipelines, a synthetic summary on those pipelines may be visualized in diagrams refered as [quantum graphs](https://tigress-web.princeton.edu/~lkelvin/pipelines/).
 
-![List of software pipelines shown as quantum graphs diagrams](./Figs/QuantumGraphsOrganization.png)
 
-This diagrams shows the sequence of tasks as rounded rectangles consuming some data-products at their inputs shown as rectangles and producing other data-producted shown as rectangles.
+-  Selecting one of these pipelines from the [following page](https://tigress-web.princeton.edu/%7Elkelvin/pipelines/w_2024_12/):
+
+<img src="./analysis_tools/Figs/QuantumGraphsOrganization.png" width="400"> 
+
+
+- selecting the [``drp_pipe/LATISS/DRP/pipeline_drp_pipe_LATISS_DRP_step1``](https://tigress-web.princeton.edu/%7Elkelvin/pipelines/w_2024_12/drp_pipe/LATISS/DRP/pipeline_drp_pipe_LATISS_DRP_step1.pdf)
+
+<img src="./analysis_tools/Figs/DRP_LATISS_step1.png" width="600">
+
+
+
+This diagrams shows the sequence of tasks as rectangles (light-blue filled) consuming some data-products at their inputs shown as rounded corners rectangles and producing other data-producted shown as rounded corners rectangles.
  
 For example the full diagram for the main [DRP pipeline (Data Release Pipeline)](https://pipelines.lsst.io/) for Auxtel (LATISS telescope) is shown [here](https://tigress-web.princeton.edu/%7Elkelvin/pipelines/w_2024_12/drp_pipe/LATISS/DRP/pipeline_drp_pipe_LATISS_DRP.pdf).
  
@@ -38,7 +50,7 @@ Those analysis tools task are run as part of the main data production pipeline. 
 
 
 
-The analysis tools tasks can be viewved as dedicated graphs shown [here](https://tigress-web.princeton.edu/%7Elkelvin/pipelines/w_2024_12/analysis_tools/)
+The analysis tools tasks can be viewved as dedicated graphs shown [here](https://tigress-web.princeton.edu/%7Elkelvin/pipelines/w_2024_12/analysis_tools/).
 
 
 ### ``analysis_tools`` applied to Auxtel
@@ -52,7 +64,16 @@ The analysis tools tasks can be viewved as dedicated graphs shown [here](https:/
 
 
 #### Plot-Navigator
+
+It is possible to visualize the plots produced by any analysis-tools pipelines in any butler repository, in any collection, without accessing a rubin-science-platform running jupyter-notebooks,
+provided one has an usdf account and can connect to the web interface:
+ 
 - [plot Navigator](https://usdf-rsp.slac.stanford.edu/plot-navigator/dashboard_gen3)
+
+
+An example of plot : a color-color plot from Auxtel Phtometry imaging is shown below:
+
+<img src="./analysis_tools/Figs/PlotNavigatorLatiss_colcol_ri_gr.png" width="600">
 
 ## Other analysis tools
 
@@ -73,5 +94,11 @@ RubinTV
 
 
 Tickets JIRA
-============
+------------
+
+
+## References
+
+- [bootcamp 2023](https://confluence.lsstcorp.org/display/DM/May+2023+Commissioning+Science+Validation+Bootcamp)
+
 
