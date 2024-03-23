@@ -88,11 +88,17 @@ AND tract=3864 AND (patch=236 or patch=237)" \
 
 - The web-page : [plot-navigator](https://usdf-rsp.slac.stanford.edu/plot-navigator/dashboard_gen3) 
 
-- notebooks
+- notebooks : [reconstructorDemo-analyzeObjectTableCore.ipynb](notebooks/reconstructorDemo-analyzeObjectTableCore.ipynb)
 
 
 
 ## Design of a tool
+
+- notebooks : [atoolsInvestigation.ipynb](notebooks/atoolsInvestigation.ipynb)
+
+
+
+
 
 
 
