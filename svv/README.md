@@ -13,6 +13,8 @@ The Rubin-project invite the members involved in the commissioning to write tech
 
 The process of writting these notes is explained [here](./technotes/README.md).
 
+<img src="./technotes/Figs/Canvas-Make-A-Technote-NoLogo.png"  width="800">
+
 ## Analysis tools
 
 
