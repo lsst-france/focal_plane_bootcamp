@@ -13,8 +13,8 @@ setup lsst_distrib
 export REPO=/sps/lsst/groups/training/2024_03_lapp_workshop/butler/main/
 ```
 
-##AuxTel example<br />
-#run the task
+## AuxTel example<br />
+Run the task
 ```
 EXPOSURES='2024030800199'
 pipetask --log-level DEBUG --long-log run -b $REPO -p isr_example.yaml \
@@ -27,8 +27,8 @@ pipetask --log-level DEBUG --long-log run -b $REPO -p isr_example.yaml \
 
 The output products will be stored in a user part of the butler as defined by the path given to the \-o option (here u/tguillem/lapp_workshop/test_20240318a).
 
-##Focal plane example<br />
-#run the task for one CCD
+## Focal plane example<br />
+Run the task for one CCD
 ```
 EXPOSURES='3023062100284'
 pipetask --log-level DEBUG --long-log run -b $REPO -p isr_example.yaml \
