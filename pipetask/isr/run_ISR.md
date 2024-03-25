@@ -8,7 +8,7 @@ setup lsst_distrib
 ```
 
 ### Run an official ISR task
-##define the butler path
+Define the butler path
 ```
 export REPO=/sps/lsst/groups/training/2024_03_lapp_workshop/butler/main/
 ```
