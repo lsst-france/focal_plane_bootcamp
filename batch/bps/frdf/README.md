@@ -42,3 +42,15 @@ The next step is to process a full exposure. In the file `focal_plane_bootcamp/b
 dataQuery: "instrument='LSSTCam' AND exposure IN (3023062100284)"
 ```
 
+Because the processing requires more computing power, we can make use of ther capability of BPS to submit the processing tasks on the Slurm computing farm using Parsl. To do so, the second line must be edited to use `ccin2p3` instead of `local` for the `computeSite`:
+```
+computeSite: ccin2p3
+```
+
+The run can then be submitted as previously:
+```
+bps_submit.sh --interactive --release w_2024_09 focal_plane_bootcamp/batch/bps/frdf/LSSTCam_isr.yaml
+```
+
+
+
