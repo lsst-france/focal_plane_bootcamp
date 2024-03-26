@@ -35,9 +35,16 @@ The first step is to process locally a single detector with the ISR task. Instea
 bps_submit.sh --interactive --release w_2024_09 focal_plane_bootcamp/batch/bps/frdf/LSSTCam_isr.yaml
 ```
 
+Check the BPS logs in the `bps_parsl_logs` directory, and the task logs in the `submit` directory.
+You can also check that your output data have been written in the Butler repository in `/sps/lsst/groups/training/2024_03_lapp_workshop/postgresql/butler/main/u/${USER}`.
+Collections can be displayed with, for example, `butler query-collections /sps/lsst/groups/training/2024_03_lapp_workshop/postgresql/butler/main u/${USER}/isr_run/LSSTCam_isr`
+Datasets can be listed with `butler query-datasets /sps/lsst/groups/training/2024_03_lapp_workshop/postgresql/butler/main --collections u/leboulch/isr_run/LSSTCam_isr`
+
+
+
 ### Batch execution of ISR on a full exposure using BPS
 
-The next step is to process a full exposure. In the file `focal_plane_bootcamp/batch/bps/frdf/LSSTCam_isr.yaml`, edit the last line to modify toe `dataQuery` by removing the detector constraint:
+The next step is to process a full exposure. In the file `focal_plane_bootcamp/batch/bps/frdf/LSSTCam_isr.yaml`, edit the last line to modify the `dataQuery` by removing the detector constraint:
 ```
 dataQuery: "instrument='LSSTCam' AND exposure IN (3023062100284)"
 ```
