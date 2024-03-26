@@ -43,7 +43,7 @@ butler query-collections /sps/lsst/groups/training/2024_03_lapp_workshop/postgre
 ```
 Datasets can be listed with:
 ```
-butler query-datasets /sps/lsst/groups/training/2024_03_lapp_workshop/postgresql/butler/main --collections u/leboulch/isr_run/LSSTCam_isr
+butler query-datasets /sps/lsst/groups/training/2024_03_lapp_workshop/postgresql/butler/main --collections u/${USER}/isr_run/LSSTCam_isr
 ```
 
 
