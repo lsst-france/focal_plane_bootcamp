@@ -1,0 +1,76 @@
+wmsServiceClass: lsst.ctrl.bps.parsl.ParslService
+computeSite: local
+
+# Target execution site for this submission.
+site:
+  # CC-IN2P3 Slurm batch farm
+  ccin2p3:
+    # Use the 'class' below if you use release 'w_2024_06' or earlier.
+    # class: ccin2p3.Ccin2p3
+    class: lsst.ctrl.bps.parsl.sites.ccin2p3.Ccin2p3
+
+  # Local host
+  local:
+    class: lsst.ctrl.bps.parsl.sites.Local
+    cores: 16
+
+parsl:
+  # Accepted values: "CRITICAL", "DEBUG", "ERROR", "FATAL", "INFO", "WARN"
+  log_level: INFO
+
+# Release of the LSST Science Pipelines to use for this submission.
+release: w_2024_09
+
+# Command line specification for running a Quantum.
+runQuantumCommand: >-
+  ${BPS_PARSL_CCIN2P3}/quantum_runner.sh --pipelines {release}
+  --
+  pipetask {runPreCmdOpts} run-qbb
+  --qgraph-node-id {qgraphNodeId}
+  {extraRunQuantumOptions}
+  {butlerConfig}
+  {fileDistributionEndPoint}{qgraphFile}
+
+# Specification for running the final job.
+finalJob:
+  whenRun: "SUCCESS"
+  command1: >-
+    ${BPS_PARSL_CCIN2P3}/quantum_runner.sh --pipelines {release}
+    --
+    butler --long-log --log-level=VERBOSE
+    transfer-from-graph
+    --register-dataset-types
+    --update-output-chain
+    {fileDistributionEndPoint}{qgraphFile}
+    {butlerConfig}
+
+# Location of the YAML file describing the science pipeline.
+pipelineYaml: "/sps/lsst/users/${USER}/bps/focal_plane_bootcamp/batch/bps/frdf/isr_example_focalplane.yaml"
+
+# Label for groups of submissions. May be used to differentiate between test
+# submissions from production submissions. Can be used as a variable in the
+# output collection name.
+project: bps_LSSTCam
+
+# Label used to group submissions together. May be used for grouping submissions
+# for particular deliverable (e.g., a JIRA issue number, a milestone, etc.).
+# Can be used as variable in output collection name. Displayed in bps report
+# output.
+campaign: LSSTCam_isr
+
+# Directory where the output files of 'bps prepare' go. Ensure the parent
+# directory exists and is writable by you. Since the pipetasks will execute
+# in a batch job, avoid using file systems local to the compute node
+# (e.g. /tmp) and prefer a file system visible from both the batch farm
+# and the login farm.
+submitPath: "/sps/lsst/users/${USER}/bps/submit/{outputRun}"
+
+# Description of the submission including definition of inputs.
+# These values are mostly those used in the pipetask/butler command lines,
+# so their names must match those used in those commands.
+payload:
+  payloadName: isr_run
+  butlerConfig: "/sps/lsst/groups/training/2024_03_lapp_workshop/butler/main"
+  inCollection: "LSSTCam/raw/all,LSSTCam/calib/DM-NNNNN/unbounded"
+  output: "{payloadName}/{campaign}"
+  dataQuery: "instrument='LSSTCam' AND exposure IN (3023062100284) AND detector.full_name='R13_S11'"
