@@ -33,7 +33,7 @@ setup lsst_distrib
 ```
 Workshop butler (for all tests)
 ```
-export REPO=/sps/lsst/groups/training/2024_03_lapp_workshop/butler/main/
+export REPO=/sps/lsst/groups/training/2024_03_lapp_workshop/postgresql/butler/main
 ```
 Run 6 butler (to test your postgresql account and eventually queries)
 ```
