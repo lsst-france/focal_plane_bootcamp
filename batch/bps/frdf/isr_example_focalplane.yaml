@@ -1,0 +1,21 @@
+description: isr example
+tasks:
+  myIsr:
+    class: lsst.ip.isr.IsrTask
+    config:
+      connections.ccdExposure: 'raw'
+      connections.outputExposure: 'cpBiasProc'
+      doWrite: true
+      doDefect: false
+      doOverscan: true
+      overscan.doParallelOverscan: false
+      overscan.fitType: 'MEDIAN_PER_ROW'
+      doBias: false
+      doVariance: true
+      doLinearize: false
+      doCrosstalk: false
+      doBrighterFatter: false
+      doDark: false
+      doFlat: false
+      doApplyGains: false
+      doFringe: false
