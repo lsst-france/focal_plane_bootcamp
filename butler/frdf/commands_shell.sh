@@ -1,4 +1,4 @@
-export REPO=/sps/lsst/groups/training/2024_03_lapp_workshop/butler/main
+export REPO=/sps/lsst/groups/training/2024_03_lapp_workshop/postgresql/butler/main
 
 #list all collections
 butler query-collections $REPO --chains=TREE
