@@ -20,6 +20,6 @@ source /pbs/throng/lsst/software/bps-parsl/prod/setup.sh
 ### Local execution of ISR on a single detector using BPS
 
 ```
-bps_submit.sh --interactive --release w_2024_11 focal_plane_bootcamp/batch/bps/frdf/LSSTCam_isr.yaml
+bps_submit.sh --interactive --release w_2024_09 focal_plane_bootcamp/batch/bps/frdf/LSSTCam_isr.yaml
 ```
 
