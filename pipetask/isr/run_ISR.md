@@ -38,3 +38,9 @@ pipetask --log-level DEBUG --long-log run -b $REPO -p isr_example.yaml \
     -d "instrument='LSSTCam' AND exposure IN ($EXPOSURES) AND detector.full_name='R13_S11'" \
     --register-dataset-types
 ```
+
+## Exercices
+- Access your output collection<br />
+- Change the pipetask options from the command line<br />
+- Modify the yaml file<br />
+- Run a local version of isr, and modify some files: check in the log that your change is really applied<br />
