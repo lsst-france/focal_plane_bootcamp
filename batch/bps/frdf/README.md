@@ -37,8 +37,14 @@ bps_submit.sh --interactive --release w_2024_09 focal_plane_bootcamp/batch/bps/f
 
 Check the BPS logs in the `bps_parsl_logs` directory, and the task logs in the `submit` directory.
 You can also check that your output data have been written in the Butler repository in `/sps/lsst/groups/training/2024_03_lapp_workshop/postgresql/butler/main/u/${USER}`.
-Collections can be displayed with, for example, `butler query-collections /sps/lsst/groups/training/2024_03_lapp_workshop/postgresql/butler/main u/${USER}/isr_run/LSSTCam_isr`
-Datasets can be listed with `butler query-datasets /sps/lsst/groups/training/2024_03_lapp_workshop/postgresql/butler/main --collections u/leboulch/isr_run/LSSTCam_isr`
+Collections can be displayed with:
+```
+butler query-collections /sps/lsst/groups/training/2024_03_lapp_workshop/postgresql/butler/main u/${USER}/isr_run/LSSTCam_isr
+```
+Datasets can be listed with:
+```
+butler query-datasets /sps/lsst/groups/training/2024_03_lapp_workshop/postgresql/butler/main --collections u/leboulch/isr_run/LSSTCam_isr
+```
 
 
 
