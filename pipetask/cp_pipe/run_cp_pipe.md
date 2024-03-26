@@ -22,3 +22,9 @@ pipetask --long-log run -b $REPO -p ${CP_PIPE_DIR}/pipelines/LsstCam/cpBias.yaml
     --register-dataset-types
 ```
 The output products will be stored in a user part of the butler as defined by the path given to the \-o option (here u/tguillem/lapp_workshop/test_mb_20240325a).
+
+## Exercices
+- Access your output collection<br />
+- Change the pipetask options from the command line<br />
+- Run a local version of cp_pipe and modify cpBias.yaml: check in the log that your change is really applied<br />
+- Apply your combined bias on another bias exposure: check the image and check in the image metadata that your combined bias has been used
