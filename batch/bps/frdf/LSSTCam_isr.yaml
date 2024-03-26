@@ -70,7 +70,7 @@ submitPath: "/sps/lsst/users/${USER}/bps/submit/{outputRun}"
 # so their names must match those used in those commands.
 payload:
   payloadName: isr_run
-  butlerConfig: "/sps/lsst/groups/training/2024_03_lapp_workshop/butler/main"
+  butlerConfig: "/sps/lsst/groups/training/2024_03_lapp_workshop/postgresql/butler/main"
   inCollection: "LSSTCam/raw/all,LSSTCam/calib/DM-NNNNN/unbounded"
-  output: "{payloadName}/{campaign}"
+  output: "u/${USER}/{payloadName}/{campaign}"
   dataQuery: "instrument='LSSTCam' AND exposure IN (3023062100284) AND detector.full_name='R13_S11'"

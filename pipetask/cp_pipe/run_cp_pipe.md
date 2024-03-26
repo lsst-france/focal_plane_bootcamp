@@ -10,7 +10,7 @@ setup lsst_distrib
 ### Run an official cp_pipe task
 Define the butler path
 ```
-export REPO=/sps/lsst/groups/training/2024_03_lapp_workshop/butler/main
+export REPO=/sps/lsst/groups/training/2024_03_lapp_workshop/postgresql/butler/main
 ```
 Run a combined bias task for a set of 5 exposures
 ```
