@@ -72,5 +72,22 @@ The run can then be submitted as previously:
 bps_submit.sh --interactive --release w_2024_09 focal_plane_bootcamp/batch/bps/frdf/LSSTCam_isr.yaml
 ```
 
+You can check with `squeue` that one job per detector will be submitted.
+
+### Gathering task executions using the BPS clustering feature
+
+Because the ISR tasks are short, one might want to execute them together within the same job, especially when we have multiple exposures to process. This can be done using the clustering feature of BPS.
+
+To enable it, add the following lines in the file `focal_plane_bootcamp/batch/bps/frdf/LSSTCam_isr.yaml`:
+```
+includeConfigs:
+  - clustering.yaml
+```
+The run can then be submitted as previously:
+```
+bps_submit.sh --interactive --release w_2024_09 focal_plane_bootcamp/batch/bps/frdf/LSSTCam_isr.yaml
+```
+
+As expected only one job will be submitted this time. You can see in the task logs (`submit` directory) that a single log file include the task logs for all  detectors.
 
 
