@@ -93,4 +93,6 @@ bps_submit.sh --interactive --release w_2024_09 focal_plane_bootcamp/batch/bps/f
 As expected only one job will be submitted this time, and its execution time will be much longer (30 minutes).
 You can see in the task logs (`submit` directory) that a single log file includes the task logs for all  detectors.
 
+### AUXTEL processing example
 
+All examples can be run with `LATISS_isr.yaml` instead of `LSSTCam_isr.yaml`.
