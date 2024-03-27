@@ -1,5 +1,7 @@
 ### Environment setup
 
+All commands given below must be executed from an CC-IN2P3 interactive node (`cca.in2p3.fr`).
+
 Setup your PostgreSQL credentials for the database `postgresql://ccpglsstdev.in2p3.fr:6553/tguillem`, namespace "workshop_butler_repo", 
 as described in https://doc.lsst.eu/tutorial/butler.html#using-a-postgresql-registry-database
 
