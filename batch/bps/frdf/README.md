@@ -88,6 +88,6 @@ The run can then be submitted as previously:
 bps_submit.sh --interactive --release w_2024_09 focal_plane_bootcamp/batch/bps/frdf/LSSTCam_isr.yaml
 ```
 
-As expected only one job will be submitted this time. You can see in the task logs (`submit` directory) that a single log file include the task logs for all  detectors.
+As expected only one job will be submitted this time. You can see in the task logs (`submit` directory) that a single log file includes the task logs for all  detectors.
 
 
