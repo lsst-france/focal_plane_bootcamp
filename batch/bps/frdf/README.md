@@ -37,6 +37,8 @@ The first step is to process locally a single detector with the ISR task. Instea
 bps_submit.sh --interactive --release w_2024_09 focal_plane_bootcamp/batch/bps/frdf/LSSTCam_isr.yaml
 ```
 
+The run should complete in a few minutes.
+
 Check the BPS logs in the `bps_parsl_logs` directory, and the task logs in the `submit` directory.
 You can also check that your output data have been written in the Butler repository by setting
 ```
@@ -72,7 +74,7 @@ The run can then be submitted as previously:
 bps_submit.sh --interactive --release w_2024_09 focal_plane_bootcamp/batch/bps/frdf/LSSTCam_isr.yaml
 ```
 
-You can check with `squeue` that one job per detector will be submitted.
+You can check with `squeue` that one job per detector will be submitted. Jobs will complete in about one minute, and the full run should take several minutes.
 
 ### Gathering task executions using the BPS clustering feature
 
@@ -88,6 +90,7 @@ The run can then be submitted as previously:
 bps_submit.sh --interactive --release w_2024_09 focal_plane_bootcamp/batch/bps/frdf/LSSTCam_isr.yaml
 ```
 
-As expected only one job will be submitted this time. You can see in the task logs (`submit` directory) that a single log file includes the task logs for all  detectors.
+As expected only one job will be submitted this time, and its execution time will be much longer (30 minutes).
+You can see in the task logs (`submit` directory) that a single log file includes the task logs for all  detectors.
 
 
