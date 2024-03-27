@@ -8,7 +8,6 @@ as described in https://doc.lsst.eu/tutorial/butler.html#using-a-postgresql-regi
 This can be done by adding the following content in your file `~/.lsst/db-auth.yaml`:
 ```
 - url: "postgresql://ccpglsstdev.in2p3.fr:6553/tguillem"
-  namespace: "workshop_butler_repo"
   username: "your_login"
   password: your_password
 ```
