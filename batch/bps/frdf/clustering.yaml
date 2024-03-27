@@ -1,0 +1,6 @@
+clusterAlgorithm: lsst.ctrl.bps.quantum_clustering_funcs.dimension_clustering
+cluster:
+    visit_isr:
+        pipetasks: myIsr
+        dimensions: visit
+        equalDimensions: visit:exposure
