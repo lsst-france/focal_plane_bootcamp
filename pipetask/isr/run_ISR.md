@@ -19,7 +19,7 @@ Run the task
 EXPOSURES='2024030800199'
 pipetask --log-level DEBUG --long-log run -b $REPO -p isr_example.yaml \
     -j 8 \
-    -i LATISS/raw/all,LATISS/calib/DM-43022,LATISS/calib/DM-NNNNN/unbounded -o u/tguillem/lapp_workshop/test_20240318a \
+    -i LATISS/raw/all,LATISS/calib/DM-43022,LATISS/calib/DM-NNNNN/unbounded -o u/${USER}/lapp_workshop/test_20240318a \
     -c myIsr:doDefect=True -c myIsr:doOverscan=True -c myIsr:overscan.doParallelOverscan=False -c myIsr:overscan.fitType='MEDIAN_PER_ROW' \
     -d "instrument='LATISS' AND exposure IN ($EXPOSURES)" \
     --register-dataset-types
@@ -33,7 +33,7 @@ Run the task for one CCD
 EXPOSURES='3023062100284'
 pipetask --log-level DEBUG --long-log run -b $REPO -p isr_example.yaml \
     -j 8 \
-    -i LSSTCam/raw/all,LSSTCam/calib/DM-NNNNN/unbounded -o u/tguillem/lapp_workshop/test_fp_20240325a \
+    -i LSSTCam/raw/all,LSSTCam/calib/DM-NNNNN/unbounded -o u/${USER}/lapp_workshop/test_fp_20240325a \
     -c myIsr:doDefect=False -c myIsr:doOverscan=True -c myIsr:overscan.doParallelOverscan=False -c myIsr:overscan.fitType='MEDIAN_PER_ROW' \
     -d "instrument='LSSTCam' AND exposure IN ($EXPOSURES) AND detector.full_name='R13_S11'" \
     --register-dataset-types
