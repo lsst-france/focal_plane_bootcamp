@@ -16,7 +16,7 @@ Run a combined bias task for a set of 5 exposures
 ```
 EXPOSURES='3023062100272, 3023062100273, 3023062100274, 3023062100275, 3023062100276'
 pipetask --long-log run -b $REPO -p ${CP_PIPE_DIR}/pipelines/LsstCam/cpBias.yaml \
-    -i LSSTCam/raw/all,LSSTCam/calib/DM-NNNNN/unbounded -o u/tguillem/lapp_workshop/test_mb_20240325a \
+    -i LSSTCam/raw/all,LSSTCam/calib/DM-NNNNN/unbounded -o u/${USER}/lapp_workshop/test_mb_20240325a \
     -c biasIsr:doDefect=False -c biasIsr:doOverscan=True -c biasIsr:overscan.doParallelOverscan=False -c biasIsr:overscan.fitType='MEDIAN' \
     -d "instrument='LSSTCam' AND exposure.science_program='13391' AND exposure.observation_type='bias' AND exposure IN ($EXPOSURES) AND detector.full_name='R13_S11'" \
     --register-dataset-types
