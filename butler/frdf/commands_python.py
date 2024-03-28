@@ -7,13 +7,13 @@ butler = dafButler.Butler(repo)
 registry = butler.registry
 
 ###General
-print('=======Collections')
-for c in sorted(registry.queryCollections()):
-       print(c)
+#print('=======Collections')
+#for c in sorted(registry.queryCollections()):
+#       print(c)
 
-print('=======Datasets')
-for x in sorted(registry.queryDatasetTypes()):
-       print(x)
+#print('=======Datasets')
+#for x in sorted(registry.queryDatasetTypes()):
+#       print(x)
 
 ###Exposures
 #list the dimensions of exposures
@@ -40,3 +40,7 @@ for x in sorted(registry.queryDatasetTypes()):
 #get a flat (need to add the physical filter)
 #calib = butler.get ('flat', instrument='LATISS', physical_filter ='SDSSg_65mm~empty', detector=0, collections='LATISS/calib/DM-43022/refactorCalibs/flatGen.g.20240227b/20240227T235022Z')
 #print(calib.getImage().getArray())
+
+#read a cpBiasProc image
+#exp_corr = butler.get('cpBiasProc', instrument='LSSTCam', full_name='R13_S11', exposure=3023062100284, collections='u/cravoux/lapp_workshop/test_fp_20240325a/20240328T112247Z')
+#print(exp_corr.getImage().getArray())
