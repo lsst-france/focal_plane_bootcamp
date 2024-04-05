@@ -1,4 +1,5 @@
-export REPO=/sps/lsst/groups/training/2024_03_lapp_workshop/postgresql/butler/main
+#export REPO=/sps/lsst/groups/training/2024_03_lapp_workshop/postgresql/butler/main
+export REPO = '/sps/lsst/groups/FocalPlane/SLAC/run6/butler/main/'
 
 echo "list all collections"
 cmd="butler query-collections $REPO --chains=TREE"
