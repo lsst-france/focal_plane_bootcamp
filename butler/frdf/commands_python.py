@@ -2,8 +2,8 @@ import lsst.daf.butler as dafButler
 import lsst.afw.display as afwDisplay
 from uuid import UUID
 
-#repo = '/sps/lsst/groups/training/2024_03_lapp_workshop/postgresql/butler/main/'
-repo = '/sps/lsst/groups/FocalPlane/SLAC/run6/butler/main/'
+repo = '/sps/lsst/groups/training/2024_03_lapp_workshop/postgresql/butler/main/'
+#repo = '/sps/lsst/groups/FocalPlane/SLAC/run6/butler/main/'
 
 butler = dafButler.Butler(repo)
 registry = butler.registry
